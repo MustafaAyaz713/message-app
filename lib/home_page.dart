@@ -41,7 +41,10 @@ class HomePage extends StatelessWidget {
           ),
           const Header("What we'll be doing"),
           const Paragraph(
-            'Join us for a day full of Firebase Workshops and Pizza!',
+            'Join us for a day full of Firebase Workshops and Pizza!', style: TextStyle(
+    fontSize: 14,
+    color: Colors.black,
+  ),
           ),
         Consumer<ApplicationState>(
   builder: (context, appState, _) => Column(
@@ -52,7 +55,7 @@ class HomePage extends StatelessWidget {
         GuestBook(
           addMessage: (message) =>
               appState.addMessageToGuestBook(message),
-          messages: appState.guestBookMessages, // new
+          messages: appState.guestBookMessages, attend: true, // new
         ),
       ],
     ],

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart'
     hide EmailAuthProvider, PhoneAuthProvider;
+import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart'; // new
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +43,7 @@ class ApplicationState extends ChangeNotifier {
 
     FirebaseUIAuth.configureProviders([
       EmailAuthProvider(),
+      GoogleProvider(clientId: "194268734639-an1jidrlf2f0ktl10jbqle4kduvd17rb.apps.googleusercontent.com"),  // new
     ]);
     
     FirebaseAuth.instance.userChanges().listen((user) {

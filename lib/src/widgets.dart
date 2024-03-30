@@ -19,7 +19,7 @@ class Header extends StatelessWidget {
 }
 
 class Paragraph extends StatelessWidget {
-  const Paragraph(this.content, {super.key});
+  const Paragraph(this.content, {super.key, required TextStyle style});
   final String content;
   @override
   Widget build(BuildContext context) => Padding(
